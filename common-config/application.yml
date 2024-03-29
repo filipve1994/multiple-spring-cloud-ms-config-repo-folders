@@ -4,16 +4,83 @@ server:
   port: ${APP_PORT:0} # Random/Dynamic Port:
 
 spring:
+  application:
+    admin:
+      enabled: true
   jpa:
+    open-in-view: false
     hibernate:
       ddl-auto: none
+#  jackson:
+#    default-property-inclusion: non_null
+#    serialization:
+#      write_dates_as_timestamps: false
+#    deserialization:
+#      accept_empty_string_as_null_object: true
+#  liquibase:
+#    change-log: classpath:/db/changelog/changelog-master.xml
+
+springdoc:
+  show-actuator: true
+  use-management-port: false
+  paths-to-exclude:
+    - "/fve/**"
 
 app:
   startup:
     message: "app is started up succesfully"
+  info:
+    name: "@project.name@"
+    description: "@project.description@"
+    version: "@project.version@"
+  swagger:
+    api-info:
+      title: "REST API MS TITLE"
+      description: ${app.description}
+      license-name: "Internal use only"
+      contact:
+        name: "FVE team"
+        email: "team@fve.be"
+    controller-package: org.fve.sampleprojects.controller
+  microservice:
+    jasypt:
+      encryptor:
+        password:
+          index: 2
 
 management:
   endpoints:
     web:
       exposure:
         include: '*'
+#  health:
+#    diskspace:
+#      enabled: false
+#  info:
+#    env:
+#      enabled: true
+#    build:
+#      enabled: true
+#    git:
+#      mode: full
+#  endpoints:
+#    enabled-by-default: true
+#    jmx:
+#      domain: org.fve.sampleprojects.msservice
+#    web:
+#      base-path: /monitoring
+#      exposure:
+#        include: info, health, prometheus
+#  endpoint:
+#    scheduledtasks:
+#      enabled: true
+#    health:
+#      show-details: always
+#    metrics:
+#      enabled: true
+
+# for jasypt-encryptor-boot-starter
+#jasypt:
+  #encryptor:
+    #algorithm: PBEWithMD5AndDES
+    #iv-generator-classname: org.jasypt.iv.NoIvGenerator
