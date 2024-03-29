@@ -36,6 +36,21 @@ So we can retrieve the configuration for our planned config client running under
 
 $> curl http://root:s3cr3t@localhost:8888/config-client/development/master
 
+https://docs.spring.io/spring-cloud-config/docs/current/reference/html/#_locating_remote_configuration_resources
+
+##### Locating Remote Configuration Resources
+
+The Config Service serves property sources from /{application}/{profile}/{label}, where the default bindings in the client app are as follows:
+
+"application" = ${spring.application.name}
+
+"profile" = ${spring.profiles.active} (actually Environment.getActiveProfiles())
+
+"label" = "master"
+
+When setting the property ${spring.application.name} do not prefix your app name with the reserved word application- to prevent issues resolving the correct property source.
+You can override all of them by setting spring.cloud.config.* (where * is name, profile or label). The label is useful for rolling back to previous versions of configuration. With the default Config Server implementation, it can be a git label, branch name, or commit ID. Label can also be provided as a comma-separated list. In that case, the items in the list are tried one by one until one succeeds. This behavior can be useful when working on a feature branch. For instance, you might want to align the config label with your branch but make it optional (in that case, use spring.cloud.config.label=myfeature,develop).
+
 ## Links
 
 - https://www.baeldung.com/spring-cloud-configuration
