@@ -2,6 +2,13 @@ server:
   address: ${APP_HOST:localhost}
   # https://www.geeksforgeeks.org/spring-boot-random-dynamic-port-allocation/
   port: ${APP_PORT:0} # Random/Dynamic Port:
+  compression:
+    enabled: ${SERVER_COMPRESSION:true}
+  error:
+    whitelabel:
+      enabled: true
+  http2:
+    enabled: ${ENABLE_HTTP2:false}
 
 spring:
   application:
