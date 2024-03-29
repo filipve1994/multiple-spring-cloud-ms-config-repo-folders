@@ -54,6 +54,8 @@ You can override all of them by setting spring.cloud.config.* (where * is name, 
 ## Links
 
 - https://www.baeldung.com/spring-cloud-configuration
+- https://medium.com/@boskyjoseph/spring-cloud-config-with-spring-boot-3-a94bb4a48fd
+- 
 
 - https://docs.spring.io/spring-cloud-config/docs/current/reference/html/#_spring_cloud_config_client
 
@@ -74,3 +76,16 @@ You can override all of them by setting spring.cloud.config.* (where * is name, 
 
 - https://docs.spring.io/spring-cloud-config/reference/server/environment-repository/overriding-properties-using-placeholders.html
 - https://docs.spring.io/spring-cloud-config/reference/server/environment-repository/overriding-properties-using-profiles.html
+- https://www.sivalabs.in/spring-boot-application-configuration-tutorial/
+- https://docs.spring.io/spring-boot/docs/current/reference/html/application-properties.html
+- https://faun.pub/managing-configuration-effectivly-in-spring-boot-611c6cf2420b
+- https://medium.com/@boskyjoseph/spring-cloud-config-with-spring-boot-3-a94bb4a48fd
+
+
+## problems spring cloud config server
+
+- https://github.com/spring-projects/spring-boot/issues/27530
+- https://github.com/spring-cloud/spring-cloud-config/issues/1876
+- https://github.com/spring-cloud/spring-cloud-config/issues/2392
+- https://github.com/spring-cloud/spring-cloud-config/issues/2335
+- 
