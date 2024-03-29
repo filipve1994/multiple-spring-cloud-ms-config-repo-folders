@@ -17,6 +17,25 @@ public repo with general settings for all kind of microservices for spring cloud
 - https://env.simplestep.ca/
 - https://www.baeldung.com/spring-boot-convert-application-properties-to-application-yml
 
+## information
+
+#### Querying the Configuration
+Now we’re able to start our server. The Git-backed configuration API provided by our server can be queried using the following paths:
+
+```
+/{application}/{profile}[/{label}]
+/{application}-{profile}.yml
+/{label}/{application}-{profile}.yml
+/{application}-{profile}.properties
+/{label}/{application}-{profile}.properties
+```
+
+The {label} placeholder refers to a Git branch, {application} to the client’s application name, and the {profile} to the client’s current active application profile.
+
+So we can retrieve the configuration for our planned config client running under the development profile in branch master via:
+
+$> curl http://root:s3cr3t@localhost:8888/config-client/development/master
+
 ## Links
 
 - https://www.baeldung.com/spring-cloud-configuration
