@@ -12,7 +12,10 @@ public repo with general settings for all kind of microservices for spring cloud
   -  => group per project, or per application, or both etc.
   -  => need to think for a good structure
 
+## convert properties to yaml online
 
+- https://env.simplestep.ca/
+- https://www.baeldung.com/spring-boot-convert-application-properties-to-application-yml
 
 ## Links
 
