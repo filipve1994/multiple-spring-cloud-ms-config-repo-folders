@@ -19,6 +19,8 @@ public repo with general settings for all kind of microservices for spring cloud
 
 ## Links
 
+- https://www.baeldung.com/spring-cloud-configuration
+
 - https://docs.spring.io/spring-cloud-config/docs/current/reference/html/#_spring_cloud_config_client
 
 - https://www.google.com/search?q=spring+cloud+config+server+combine+multiple+config+repos
