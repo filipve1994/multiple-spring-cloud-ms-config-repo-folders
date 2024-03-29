@@ -11,3 +11,9 @@ spring:
 app:
   startup:
     message: "app is started up succesfully"
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
