@@ -1,0 +1,3 @@
+app.general-microservice-admin-server: hallo
+app.general-microservice-admin-server-custom: hallo2
+app.general-microservice-admin-server-devprofile: hallo2-from-dev.ymlfile
