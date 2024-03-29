@@ -1,0 +1,60 @@
+management:
+  endpoint:
+    auditevents:
+      enabled: true
+    beans:
+      enabled: true
+    caches:
+      enabled: true
+    conditions:
+      enabled: true
+    configprops:
+      enabled: true
+      show-values: always
+    env:
+      enabled: true
+      show-values: always
+    info:
+      enabled: true
+    liquibase:
+      enabled: true
+    logfile:
+      enabled: true
+      external-file: ${logging.file.name}
+    scheduledtasks:
+      enabled: true
+    health:
+      show-details: always
+    metrics:
+      enabled: true
+  endpoints:
+    web:
+      base-path: /actuator
+      exposure:
+        include: '*'
+        #include: refresh, info, health, prometheus
+      discovery:
+        enabled: true
+    enabled-by-default: true
+    jmx:
+      domain: org.fve.services.${spring.application.name}
+#      domain: org.fve.sampleprojects.msservice     
+  info:
+    build.enabled: true
+    defaults.enabled: true
+    git:
+      enabled: true
+      mode: full
+    env.enabled: true
+    java.enabled: true        
+    os.enabled: true
+  health:
+    diskspace.enabled: false
+    db.enabled: true
+    jms.enabled: true
+    livenessstate.enabled: false
+    mail.enabled: true
+    ping.enabled: true
+    rabbit.enabled: true
+    readinesstate.enabled: false
+    redis.enabled: false

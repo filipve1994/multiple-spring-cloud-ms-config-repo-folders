@@ -1,0 +1,24 @@
+# https://springdoc.org/
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+    enabled: true
+    groups:
+      enabled: true
+  #packages-to-scan: '*'
+  #paths-to-match: '*'
+  paths-to-exclude:
+    - "/fve/**"
+  cache:
+    disabled: true
+  show-actuator: false
+  writer-with-default-pretty-printer: true
+  use-management-port: false
+  enable-spring-security: true
+  swagger-ui:
+    path: /swagger-ui.html
+    enabled: true
+    tryItOutEnabled: true
+    csrf:
+      enabled: false
+
