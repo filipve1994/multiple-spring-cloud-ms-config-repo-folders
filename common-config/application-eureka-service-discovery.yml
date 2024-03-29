@@ -4,6 +4,14 @@ server:
   # https://www.geeksforgeeks.org/spring-boot-random-dynamic-port-allocation/
   port: ${APP_PORT:8761} # Random/Dynamic Port:
 
+# https://www.baeldung.com/spring-cloud-netflix-eureka
 eureka:
   instance:
     hostname: ${APP_HOST:localhost}
+  client:
+    # We’re telling the built-in Eureka Client not to register with itself
+    # because our application should be acting as a server.
+    register-with-eureka: false
+    # If we configure this property as true,
+    # the inbuilt client will try to fetch the Eureka registry.
+    fetch-registry: false
