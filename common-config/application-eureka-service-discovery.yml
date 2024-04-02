@@ -8,6 +8,8 @@ server:
 eureka:
   instance:
     hostname: ${APP_HOST:localhost}
+#    prefer-ip-address: true
+    prefer-ip-address: false
   client:
     # We’re telling the built-in Eureka Client not to register with itself
     # because our application should be acting as a server.
@@ -15,3 +17,5 @@ eureka:
     # If we configure this property as true,
     # the inbuilt client will try to fetch the Eureka registry.
     fetch-registry: false
+    serverUrl:
+      defaultZone: ${HTTP_PROTOCOL:http}://${APP_DISCOVERY_SERVER_HOST:localhost}:${APP_DISCOVERY_SERVER_PORT:8761}/eureka/

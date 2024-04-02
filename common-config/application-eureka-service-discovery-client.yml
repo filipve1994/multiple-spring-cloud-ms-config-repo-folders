@@ -11,5 +11,8 @@ eureka:
     prefer-ip-address: false
     client:
       register-with-eureka: true
+      # If we configure this property as true,
+      # the inbuilt client will try to fetch the Eureka registry.
+      fetch-registry: true
       serverUrl:
         defaultZone: ${HTTP_PROTOCOL:http}://${APP_DISCOVERY_SERVER_HOST:localhost}:${APP_DISCOVERY_SERVER_PORT:8761}/eureka/
